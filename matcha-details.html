@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iced Matcha Coffee</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="details.css">
+
+</head>
+<body>
+  <header>
+  <div class="logo">
+      <img src="images/logo.png" alt="Brew Haven Logo">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="drink-details">
+    <div class="details-wrapper">
+      <div class="details-content">
+        <h1>Iced Matcha Coffee</h1>
+        <p>
+          A smooth and creamy iced coffee infused with matcha for the perfect blend of bold and earthy flavors.
+        </p>
+        <h2>$9.99</h2>
+        <div class="button-group">
+			<button class="btn btn-secondary" id="back-button">Go Back</button>        </div>
+      </div>
+      <div class="details-image">
+        <img src="images/drink2.png" alt="Iced Matcha Coffee">
+      </div>
+    </div>
+  </main>
+  <script>
+  // JavaScript to dynamically set the "Back" button functionality
+    document.addEventListener('DOMContentLoaded', () => {
+  const backButton = document.getElementById('back-button');
+
+  backButton.textContent = 'Go Back';
+  backButton.onclick = () => {
+    if (history.length > 1) {
+      history.back(); // Navigate to the previous page in the browser's history
+    } else {
+      location.href = 'index.html'; // Fallback if no history is available
+    }
+  };
+});
+
+  </script>
+</body>
+</html>

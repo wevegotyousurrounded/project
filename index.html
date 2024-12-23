@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew Haven - Coffee Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Background Audio -->
+  <audio id="background-audio" src="audio/click.mp3" loop muted autoplay></audio>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Brew Haven Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="text-content">
+        <h1>Brew Haven</h1>
+		<p>
+		At Brew Haven, we take pride in being more than just a coffee shop. We are a space where the community comes together to enjoy great coffee, share stories, and build connections. Our commitment to sustainability drives us to source high-quality, eco-friendly coffee beans, ensuring every cup supports both the environment and local farmers.
+	</p>
+    
+        <div class="button-group">
+          <a href="#specials-section" class="btn btn-primary">Get Started</a>
+		  <a href="about.html" class="btn btn-secondary">About Us</a>
+          
+        </div>
+      </div>
+      <div class="image-content">
+        <img src="images/coffee-cup.png" alt="Coffee Cup" class="fade-in">
+      </div>
+    </div>
+	<button class="scroll-button down">↓</button>
+
+    <!-- Specials Section -->
+	<h2 class="specials-heading">Recommendations</h2>
+	<div id="specials-section" class="specials-section">
+  <button class="scroll-button left">←</button>
+  <div class="specials-container">
+    <div class="special" style="background: #E8B4B8;">
+      <h2>Strawberry Coffee</h2>
+      <img src="images/drink1.png" alt="Strawberry Coffee">
+      <a href="strawberry-details.html" class="btn btn-primary">More Details</a>
+    </div>
+    <div class="special" style="background: #E8B4B8;">
+      <h2>Iced Matcha Coffee</h2>
+      <img src="images/drink2.png" alt="Green Tea Coffee">
+      <a href="matcha-details.html" class="btn btn-primary">More Details</a>
+    </div>
+    <div class="special" style="background: #E8B4B8;">
+      <h2>Chocolate Cupcake</h2>
+      <img src="images/food1.png" alt="Chocolate Cupcake">
+      <a href="chocolate-details.html" class="btn btn-primary">More Details</a>
+    </div>
+    <div class="special" style="background: #E8B4B8;">
+      <h2>Club Sandwich</h2>
+      <img src="images/food2.png" alt="Club Sandwich">
+      <a href="sandwich.html" class="btn btn-primary">More Details</a>
+    </div>
+  </div>
+  <button class="scroll-button right">→</button>
+</div>
+<!-- Upcoming Events Section -->
+	<section class="upcoming-events">
+  <h2>Upcoming Events</h2>
+  <div class="event-container">
+    <div class="event-image">
+      <img src="images/barista-workshop.jpeg" alt="Barista Workshop">
+    </div>
+    <div class="event-details">
+      <h3>Barista Workshop <span class="event-icon">☕</span></h3>
+      <p><strong>Date:</strong> Saturday, December 26, 2024</p>
+      <p><strong>Time:</strong> 2:00 PM - 4:00 PM</p>
+      <p><strong>Venue:</strong> Brew Haven Coffee Lab</p>
+      <p>
+        <strong>Details:</strong> Explore the art of brewing the perfect cup of coffee. 
+        Learn latte art, coffee tasting, and expert brewing techniques from professional baristas.
+      </p>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>
+	© 2024 Brew Haven. All rights reserved.</p>
+  <p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

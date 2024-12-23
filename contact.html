@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header>
+  <div class="logo">
+      <img src="images/logo.png" alt="Brew Haven Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+    <!-- Contact Info -->
+    <section class="contact-info">
+      <div class="info-box">
+        <h2>Contact Us</h2>
+        <p>*** Victoria St,<br> Kamloops, BC<br> A1A 1A1</p>
+        <p>(***) ***-****</p>
+      </div>
+      <div class="info-box">
+        <h2>Store Hours</h2>
+        <ul>
+          <li>Monday | Closed</li>
+          <li>Tuesday | 8 am - 9 pm</li>
+          <li>Wednesday | 8 am - 9 pm</li>
+          <li>Thursday | 8 am - 9 pm</li>
+          <li>Friday | 8 am - 9 pm</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.707362887317!2d-120.3349878!3d50.6761495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537e2c4de02a1e35%3A0xbde4608c4efb8e5a!2sThe%20Art%20We%20Are%20Cafe!5e0!3m2!1sen!2sca!4v1692673674551!5m2!1sen!2sca"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+      <form action="#" method="POST">
+        <h2>Send Us a Message</h2>
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

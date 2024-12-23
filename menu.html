@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Brew Haven</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <header><div class="logo">
+      <img src="images/logo.png" alt="Brew Haven Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="menu-container">
+      <h1>Menu</h1>
+      <!-- Drink section -->
+      <section class="menu-category">
+        <h2>Drinks</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+		  <div class="badge">Best Seller</div>
+            <img src="images/drink1.png" alt="Strawberry Coffee" onclick="location.href='strawberry-details.html';">
+			<div class="hover-text">Click for more details</div>
+            <h2>Strawberry Coffee</h2>
+          </div>
+          <div class="menu-item">
+            <img src="images/drink2.png" alt="Iced Matcha Coffee" onclick="location.href='matcha-details.html';">
+			<div class="hover-text">Click for more details</div>
+            <h2>Iced Matcha Coffee</h2>
+          </div>
+        </div>
+      </section>
+		<!-- Desserts Section -->
+      <section class="menu-category">
+        <h2>Desserts</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="images/food1.png" alt="Chocolate Cupcake" onclick="location.href='chocolate-details.html';">
+			<div class="hover-text">Click for more details</div>
+            <h2>Chocolate Cupcake</h2>
+          </div>
+        </div>
+      </section>
+		<!-- Food Section -->
+      <section class="menu-category">
+        <h2>Foods</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="images/food2.png" alt="Club Sandwich" onclick="location.href='sandwich.html';">
+			<div class="hover-text">Click for more details</div>
+            <h2>Club Sandwich</h2>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 Brew Haven. All rights reserved.</p>
+  </footer>
+</body>
+</html>

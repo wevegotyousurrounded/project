@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - Brew Haven</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="events.css">
+</head>
+<body>
+  <header>
+  <div class="logo">
+      <img src="images/logo.png" alt="Brew Haven Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="events-container">
+    <h1 class="events-heading">Upcoming Events</h1>
+
+    <!-- Event 1 -->
+    <div class="event-row">
+      <div class="event-image">
+        <img src="images/barista-workshop.jpeg" alt="Live Music Night">
+      </div>
+      <div class="event-details">
+	  <h2>Barista Workshop ☕</h2>
+        <p>Date: Saturday, December 26, 2024</p>
+        <p>Time: 2:00 PM - 4:00 PM</p>
+        <p>Venue: Brew Haven Coffee Lab</p>
+        <p>Details: Explore the art of brewing the perfect cup of coffee. Learn latte art, coffee tasting, and expert brewing techniques from professional baristas.</p>
+      </div>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="event-row reverse">
+      <div class="event-details">
+        <h2>Live Music Night 🎸</h2>
+        <p>Date: Friday, December 31, 2024</p>
+        <p>Time: 7:00 PM - 10:00 PM</p>
+        <p>Venue: Brew Haven Coffee Shop - Main Hall</p>
+        <p>Details: Join us for an evening of soulful tunes with local bands. This event features live acoustic music, great company, and exclusive coffee blends. Make it a night to remember!</p>
+      </div>
+      <div class="event-image">
+        <img src="images/music-event.jpeg" alt="Barista Workshop">
+      </div>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="event-row">
+      <div class="event-image">
+        <img src="images/open-mic.jpeg" alt="Open Mic Night">
+      </div>
+      <div class="event-details">
+        <h2>Open Mic Night 🎤</h2>
+        <p>Date: Thursday, January 12, 2025</p>
+        <p>Time: 6:30 PM - 9:30 PM</p>
+        <p>Venue: Brew Haven Stage Area</p>
+        <p>Details: Showcase your talent or enjoy performances by budding artists in poetry, stand-up comedy, or music. Sip on your favorite coffee while cheering for the performers.</p>
+      </div>
+    </div>
+	<section class="calendar-section">
+  <h2 class="calendar-heading">Event Calendar</h2>
+  <div id="event-calendar" class="calendar"></div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>© 2024 Brew Haven. All rights reserved.</p>
+  </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+  // Dates for highlighting
+  const events = [
+    { date: '2024-12-31', title: 'Live Music Night 🎸' },
+    { date: '2024-12-26', title: 'Barista Workshop ☕' },
+    { date: '2025-01-012', title: 'Open Mic Night 🎤' },
+  ];
+
+  const calendarContainer = document.getElementById('event-calendar');
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth();
+
+  // Helper function to create the calendar
+  function createCalendar(year, month) {
+    const firstDay = new Date(year, month, 1).getDay(); // Day of the week for the 1st
+    const daysInMonth = new Date(year, month + 1, 0).getDate(); // Total days in the month
+
+    // Get the event dates for this month
+    const eventDates = events.map(e => new Date(e.date).toISOString().split('T')[0]);
+
+    // Header
+    const monthNames = [
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December',
+    ];
+    calendarContainer.innerHTML = `
+      <div class="calendar-header">
+        <h3>${monthNames[month]} ${year}</h3>
+      </div>
+      <div class="calendar-grid">
+        <div class="day-name">Sun</div>
+        <div class="day-name">Mon</div>
+        <div class="day-name">Tue</div>
+        <div class="day-name">Wed</div>
+        <div class="day-name">Thu</div>
+        <div class="day-name">Fri</div>
+        <div class="day-name">Sat</div>
+      </div>
+    `;
+
+    // Generate calendar days
+    const calendarGrid = calendarContainer.querySelector('.calendar-grid');
+    for (let i = 0; i < firstDay; i++) {
+      const emptyCell = document.createElement('div');
+      emptyCell.classList.add('day', 'empty');
+      calendarGrid.appendChild(emptyCell);
+    }
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const dayCell = document.createElement('div');
+      dayCell.classList.add('day');
+      const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+
+      // Highlight current date
+      if (dateString === currentDate.toISOString().split('T')[0]) {
+        dayCell.classList.add('current-date');
+      }
+
+      // Highlight event dates
+      if (eventDates.includes(dateString)) {
+        dayCell.classList.add('event-date');
+        const event = events.find(e => e.date === dateString);
+        dayCell.dataset.tooltip = event.title;
+      }
+
+      dayCell.textContent = day;
+      calendarGrid.appendChild(dayCell);
+    }
+  }
+
+  // Render the calendar for the current month and year
+  createCalendar(currentYear, currentMonth);
+});
+</script>
+</body>
+</html>
